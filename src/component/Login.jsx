@@ -12,7 +12,7 @@ const Login = () => {
   const { token } = useContext(AuthContext);
   const navigate = useNavigate();
     const { setIsLogged } = useContext(AuthContext);
-    // const[token,setToken] = useState("")
+   
   const [info, setInfo] = useState({
     email: "",
     password: "",
@@ -23,7 +23,7 @@ const Login = () => {
   };
   const submit = async (e) => {
     e.preventDefault();
-    // setToken(localStorage.getItem("token"))
+    
     const { email, password } = info;
     
       console.log(token)
@@ -35,7 +35,7 @@ const Login = () => {
       } else if (password.length < 6) {
         alert("password must be of 6 characters");
       } else {
-        const data = await fetch("http://localhost:8000/login", {
+        const data = await fetch("https://task1-backend-mckn.onrender.com/login", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

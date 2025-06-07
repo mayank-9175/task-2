@@ -9,11 +9,10 @@ import Button from "@mui/material/Button";
 import { AuthContext } from "../context/UserContext";
 const Navbar = () => {
   const { isLogged, setIsLogged, userData } = useContext(AuthContext);
-  // const [userData,setUserData] = useState({})
   const navigate = useNavigate();
   const handleLogout = () => {
     localStorage.removeItem("token");
-    setIsLogged(false); // ✅ Context update hoga
+    setIsLogged(false); 
     navigate("/login");
   };
   return (
@@ -37,9 +36,7 @@ const Navbar = () => {
               </>
             ) : (
               <>
-                {/* <NavLink className="a" to="#"> */}
-                   {/* {!loading && <span>Welcome, {userData.name}</span>} */}
-                {/* </NavLink> */}
+              
                 <NavLink onClick={handleLogout} className="a" to="#">
                   Logout
                 </NavLink>

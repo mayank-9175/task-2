@@ -11,7 +11,7 @@ const Welcome = () => {
     if (!token) {
       navigate("/login");
     } else {
-      const data = await fetch("http://localhost:8000/profile", {
+      const data = await fetch("https://task1-backend-mckn.onrender.com/profile", {
         method: "GET",
         headers: {
           Authorization: token,

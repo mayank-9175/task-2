@@ -55,7 +55,8 @@ const Register = () => {
           "password should contain atleast one number and one special character"
         );
       } else {
-        const data = await fetch("http://localhost:8000/register", {
+        // const data = await fetch("http://localhost:8000/register", {
+        const data = await fetch("https://task1-backend-mckn.onrender.com/register", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
