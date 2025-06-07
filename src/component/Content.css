@@ -1,0 +1,29 @@
+.center{
+    display:flex;
+    width:80%;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    margin-top:80px;
+    right:50%;
+    margin-left:100px
+}
+.left{
+    flex:60%;
+    /* width:100%; */
+    display:flex;
+    /* margin:auto */
+}
+.left img{
+   width:600px;
+   /* margin-left:40px */
+}
+.right{
+    flex:40%;
+    /* width:50%; */
+}
+.p{
+    gap:10px;
+    word-spacing:15px;
+    letter-spacing:3px;
+}
